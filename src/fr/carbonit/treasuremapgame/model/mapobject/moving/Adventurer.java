@@ -2,6 +2,8 @@ package fr.carbonit.treasuremapgame.model.mapobject.moving;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import fr.carbonit.treasuremapgame.consts.GlobalConsts;
 import fr.carbonit.treasuremapgame.model.Coordinates;
@@ -10,6 +12,8 @@ import fr.carbonit.treasuremapgame.model.enums.OrientationEnum;
 import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
 public class Adventurer extends MovingMapObject {
+
+	private static final Logger LOGGER = Logger.getLogger(Adventurer.class.getName());
 
 	private String name;
 	private int treasuresQuantity;
@@ -80,6 +84,11 @@ public class Adventurer extends MovingMapObject {
 	private static Optional<Treasure> isTreasurePresent(List<Treasure> treasures, Coordinates position) {
 		return treasures.stream().filter(treasure -> treasure.getPosition().getCoordX() == position.getCoordX()
 				&& treasure.getPosition().getCoordY() == position.getCoordY()).findAny();
+	}
+
+	public void logAdventurerInfo() {
+		var adventurerInfo = toString();
+		LOGGER.log(Level.INFO, adventurerInfo);
 	}
 
 	public int getTreasuresQuantity() {

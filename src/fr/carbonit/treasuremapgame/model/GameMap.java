@@ -9,13 +9,12 @@ import fr.carbonit.treasuremapgame.exceptions.FileContentException;
 import fr.carbonit.treasuremapgame.interfaces.IMapObjectsChecker;
 import fr.carbonit.treasuremapgame.interfaces.IMoveChecker;
 import fr.carbonit.treasuremapgame.model.mapobject.moving.Adventurer;
-import fr.carbonit.treasuremapgame.model.mapobject.moving.MovingMapObject;
 import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Mountain;
 import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
 public class GameMap {
 
-	private final Coordinates size;
+	private Coordinates size;
 
 	private List<Mountain> mountains = new ArrayList<>();
 	private List<Treasure> treasures = new ArrayList<>();
@@ -46,17 +45,19 @@ public class GameMap {
 	}
 
 	private boolean isGameOnGoing() {
-		return adventurers.stream().map(MovingMapObject::isMovementOver).noneMatch(Boolean.TRUE::equals);
+		return adventurers.stream().map(Adventurer::isMovementOver).noneMatch(Boolean.TRUE::equals);
 	}
 
-	private void performMovement(MovingMapObject adventurer) {
-		adventurer.calculateNewCoordinates().ifPresent(coordinates -> moveObjectAndCatchTreasure(adventurer, coordinates));
+	private void performMovement(Adventurer adventurer) {
+		adventurer.calculateNewCoordinates()
+				.ifPresent(coordinates -> moveObjectAndCatchTreasure(adventurer, coordinates));
 	}
 
-	private void moveObjectAndCatchTreasure(MovingMapObject adventurer, Coordinates coordinates) {
+	private void moveObjectAndCatchTreasure(Adventurer adventurer, Coordinates coordinates) {
 		if (moveChecker.checkMovementPossible(this, coordinates)) {
 			adventurer.setPosition(coordinates);
 			adventurer.tryToCatchTreasure(treasures);
+			adventurer.logAdventurerInfo();
 		}
 	}
 
