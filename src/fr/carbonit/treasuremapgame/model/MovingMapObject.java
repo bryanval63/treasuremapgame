@@ -30,7 +30,7 @@ public abstract class MovingMapObject extends MapObject {
 		return indexMovementSeq++;
 	}
 
-	protected String getMovementsSequence() {
+	public String getMovementsSequence() {
 		return movementsSequence;
 	}
 
@@ -38,7 +38,7 @@ public abstract class MovingMapObject extends MapObject {
 		return indexMovementSeq;
 	}
 
-	protected OrientationEnum getOrientation() {
+	public OrientationEnum getOrientation() {
 		return orientation;
 	}
 

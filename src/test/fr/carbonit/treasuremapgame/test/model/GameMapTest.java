@@ -1,4 +1,4 @@
-package fr.carbonit.treasuremapgame.model;
+package fr.carbonit.treasuremapgame.test.model;
 
 import static org.junit.Assert.assertEquals;
 
@@ -7,6 +7,11 @@ import java.util.List;
 import org.junit.Test;
 
 import fr.carbonit.treasuremapgame.interfaces.impl.AdventurerMoveChecker;
+import fr.carbonit.treasuremapgame.model.Adventurer;
+import fr.carbonit.treasuremapgame.model.Coordinates;
+import fr.carbonit.treasuremapgame.model.GameMap;
+import fr.carbonit.treasuremapgame.model.Mountain;
+import fr.carbonit.treasuremapgame.model.Treasure;
 import fr.carbonit.treasuremapgame.model.enums.OrientationEnum;
 
 public class GameMapTest {

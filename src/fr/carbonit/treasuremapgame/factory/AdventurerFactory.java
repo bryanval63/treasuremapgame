@@ -24,7 +24,8 @@ public class AdventurerFactory extends MapObjectFactory {
 	public List<Adventurer> getAdventurers() {
 		List<String> adventurers = getMatchingRegLine(GlobalConsts.REGEX_A_XXX_X_X_NEWS_ADG);
 
-		return extractCoordinates(adventurers, ADVENTURER_INDEX_START, ADVENTURER_INDEX_END).map(AdventurerFactory::createAdventurer).toList();
+		return extractCoordinates(adventurers, ADVENTURER_INDEX_START, ADVENTURER_INDEX_END)
+				.map(AdventurerFactory::createAdventurer).toList();
 	}
 
 	private static Adventurer createAdventurer(String[] adventurer) {

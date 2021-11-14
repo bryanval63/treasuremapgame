@@ -84,6 +84,10 @@ public class Adventurer extends MovingMapObject {
 		return treasuresQuantity;
 	}
 
+	public String getName() {
+		return name;
+	}
+
 	@Override
 	public String toString() {
 		return new StringBuilder("A").append(GlobalConsts.DASH).append(name).append(GlobalConsts.DASH)

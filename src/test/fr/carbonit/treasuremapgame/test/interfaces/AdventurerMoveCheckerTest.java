@@ -1,4 +1,4 @@
-package fr.carbonit.treasuremapgame.interfaces;
+package fr.carbonit.treasuremapgame.test.interfaces;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

@@ -1,9 +1,12 @@
-package fr.carbonit.treasuremapgame.model;
+package fr.carbonit.treasuremapgame.test.model;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import fr.carbonit.treasuremapgame.model.Coordinates;
+import fr.carbonit.treasuremapgame.model.Treasure;
 
 public class TreasureTest {
 
