@@ -1,6 +1,7 @@
-package fr.carbonit.treasuremapgame.model;
+package fr.carbonit.treasuremapgame.model.mapobject.nomoving;
 
 import fr.carbonit.treasuremapgame.consts.GlobalConsts;
+import fr.carbonit.treasuremapgame.model.Coordinates;
 
 public class Treasure extends NoMovingMapObject {
 	private int quantity;

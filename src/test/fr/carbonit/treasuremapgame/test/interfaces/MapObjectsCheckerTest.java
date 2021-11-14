@@ -13,7 +13,7 @@ import fr.carbonit.treasuremapgame.interfaces.impl.AdventurerMoveChecker;
 import fr.carbonit.treasuremapgame.interfaces.impl.MapObjectsChecker;
 import fr.carbonit.treasuremapgame.model.Coordinates;
 import fr.carbonit.treasuremapgame.model.GameMap;
-import fr.carbonit.treasuremapgame.model.Mountain;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Mountain;
 
 public class MapObjectsCheckerTest {
 

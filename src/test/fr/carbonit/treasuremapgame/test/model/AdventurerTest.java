@@ -8,11 +8,11 @@ import java.util.Optional;
 
 import org.junit.Test;
 
-import fr.carbonit.treasuremapgame.model.Adventurer;
 import fr.carbonit.treasuremapgame.model.Coordinates;
-import fr.carbonit.treasuremapgame.model.Treasure;
 import fr.carbonit.treasuremapgame.model.enums.MovementEnum;
 import fr.carbonit.treasuremapgame.model.enums.OrientationEnum;
+import fr.carbonit.treasuremapgame.model.mapobject.moving.Adventurer;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
 public class AdventurerTest {
 

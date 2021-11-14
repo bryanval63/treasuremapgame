@@ -3,10 +3,10 @@ package fr.carbonit.treasuremapgame.interfaces.impl;
 import java.util.List;
 
 import fr.carbonit.treasuremapgame.interfaces.IMoveChecker;
-import fr.carbonit.treasuremapgame.model.Adventurer;
 import fr.carbonit.treasuremapgame.model.Coordinates;
 import fr.carbonit.treasuremapgame.model.GameMap;
-import fr.carbonit.treasuremapgame.model.Mountain;
+import fr.carbonit.treasuremapgame.model.mapobject.moving.Adventurer;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Mountain;
 
 public class AdventurerMoveChecker implements IMoveChecker {
 

@@ -1,4 +1,6 @@
-package fr.carbonit.treasuremapgame.model;
+package fr.carbonit.treasuremapgame.model.mapobject;
+
+import fr.carbonit.treasuremapgame.model.Coordinates;
 
 public class MapObject {
 	private Coordinates position;

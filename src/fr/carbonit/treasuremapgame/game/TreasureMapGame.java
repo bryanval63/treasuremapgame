@@ -5,10 +5,10 @@ import java.util.logging.Logger;
 
 import fr.carbonit.treasuremapgame.consts.ErrorMsgConsts;
 import fr.carbonit.treasuremapgame.consts.GlobalConsts;
-import fr.carbonit.treasuremapgame.controller.FileContentController;
 import fr.carbonit.treasuremapgame.controller.TreasureMapGameController;
 import fr.carbonit.treasuremapgame.exceptions.FileException;
 import fr.carbonit.treasuremapgame.interfaces.impl.FileContentChecker;
+import fr.carbonit.treasuremapgame.interfaces.impl.FileContentService;
 
 public class TreasureMapGame {
 
@@ -16,8 +16,8 @@ public class TreasureMapGame {
 
 	public static void main(String[] args) {
 		try {
-			var fileContentController = new FileContentController(GlobalConsts.FILE_PATH_IN, new FileContentChecker());
-			new TreasureMapGameController(fileContentController).start();
+			var fileContentController = new FileContentService(GlobalConsts.FILE_PATH_IN, new FileContentChecker());
+			new TreasureMapGameController(fileContentController).startGame();
 		} catch (FileException e) {
 			String error = buildErrorMessage(e);
 			LOGGER.log(Level.SEVERE, error);

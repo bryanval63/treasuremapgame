@@ -3,9 +3,9 @@ package fr.carbonit.treasuremapgame.factory;
 import java.util.List;
 
 import fr.carbonit.treasuremapgame.consts.GlobalConsts;
-import fr.carbonit.treasuremapgame.model.Adventurer;
 import fr.carbonit.treasuremapgame.model.Coordinates;
 import fr.carbonit.treasuremapgame.model.enums.OrientationEnum;
+import fr.carbonit.treasuremapgame.model.mapobject.moving.Adventurer;
 
 public class AdventurerFactory extends MapObjectFactory {
 

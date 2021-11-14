@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import fr.carbonit.treasuremapgame.model.Coordinates;
-import fr.carbonit.treasuremapgame.model.Treasure;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
 public class TreasureTest {
 

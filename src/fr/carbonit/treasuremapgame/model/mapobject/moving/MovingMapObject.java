@@ -1,9 +1,12 @@
-package fr.carbonit.treasuremapgame.model;
+package fr.carbonit.treasuremapgame.model.mapobject.moving;
 
 import java.util.List;
 import java.util.Optional;
 
+import fr.carbonit.treasuremapgame.model.Coordinates;
 import fr.carbonit.treasuremapgame.model.enums.OrientationEnum;
+import fr.carbonit.treasuremapgame.model.mapobject.MapObject;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
 public abstract class MovingMapObject extends MapObject {
 

@@ -11,9 +11,9 @@ import fr.carbonit.treasuremapgame.exceptions.FileContentException;
 import fr.carbonit.treasuremapgame.interfaces.IMapObjectsChecker;
 import fr.carbonit.treasuremapgame.model.Coordinates;
 import fr.carbonit.treasuremapgame.model.GameMap;
-import fr.carbonit.treasuremapgame.model.Mountain;
-import fr.carbonit.treasuremapgame.model.MovingMapObject;
-import fr.carbonit.treasuremapgame.model.Treasure;
+import fr.carbonit.treasuremapgame.model.mapobject.moving.MovingMapObject;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Mountain;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
 public class MapObjectsChecker implements IMapObjectsChecker {
 

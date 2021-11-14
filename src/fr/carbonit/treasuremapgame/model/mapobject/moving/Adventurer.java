@@ -1,11 +1,13 @@
-package fr.carbonit.treasuremapgame.model;
+package fr.carbonit.treasuremapgame.model.mapobject.moving;
 
 import java.util.List;
 import java.util.Optional;
 
 import fr.carbonit.treasuremapgame.consts.GlobalConsts;
+import fr.carbonit.treasuremapgame.model.Coordinates;
 import fr.carbonit.treasuremapgame.model.enums.MovementEnum;
 import fr.carbonit.treasuremapgame.model.enums.OrientationEnum;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
 public class Adventurer extends MovingMapObject {
 

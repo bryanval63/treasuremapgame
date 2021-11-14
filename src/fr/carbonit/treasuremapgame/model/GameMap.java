@@ -8,6 +8,10 @@ import fr.carbonit.treasuremapgame.consts.GlobalConsts;
 import fr.carbonit.treasuremapgame.exceptions.FileContentException;
 import fr.carbonit.treasuremapgame.interfaces.IMapObjectsChecker;
 import fr.carbonit.treasuremapgame.interfaces.IMoveChecker;
+import fr.carbonit.treasuremapgame.model.mapobject.moving.Adventurer;
+import fr.carbonit.treasuremapgame.model.mapobject.moving.MovingMapObject;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Mountain;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
 public class GameMap {
 

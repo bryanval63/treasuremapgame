@@ -4,7 +4,7 @@ import java.util.List;
 
 import fr.carbonit.treasuremapgame.consts.GlobalConsts;
 import fr.carbonit.treasuremapgame.model.Coordinates;
-import fr.carbonit.treasuremapgame.model.Treasure;
+import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
 public class TreasureFactory extends MapObjectFactory {
 
