@@ -36,12 +36,6 @@ public class FileContentService implements IFileContentService {
 	}
 
 	@Override
-	public void verifyFileContent() throws FileContentException {
-		fileContentChecker.verifyFileNotEmpty(fileContentLines);
-		fileContentChecker.verifyFileHasRightFormatedLines(fileContentLines);
-	}
-
-	@Override
 	public Coordinates extractMapSize() throws FileContentException {
 		String mapLine = extractMapLine();
 		String[] size = Arrays.copyOfRange(mapLine.split(GlobalConsts.PATTERN_DASH.pattern()), COORDS_INDEX_START,

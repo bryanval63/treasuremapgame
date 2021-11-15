@@ -2,6 +2,12 @@ package fr.carbonit.treasuremapgame.model.mapobject;
 
 import fr.carbonit.treasuremapgame.model.Coordinates;
 
+/**
+ * Type d'objet qui est présent sur la carte
+ * 
+ * @author bryan
+ *
+ */
 public class MapObject {
 	private Coordinates position;
 

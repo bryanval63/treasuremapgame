@@ -5,9 +5,13 @@ import fr.carbonit.treasuremapgame.exceptions.FileException;
 import fr.carbonit.treasuremapgame.model.Coordinates;
 import fr.carbonit.treasuremapgame.model.GameMap;
 
+/**
+ * Actions sur les fichiers
+ * 
+ * @author bryan
+ *
+ */
 public interface IFileContentService {
-
-	void verifyFileContent() throws FileContentException;
 
 	void writeFile(GameMap map) throws FileException;
 

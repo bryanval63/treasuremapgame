@@ -7,6 +7,7 @@ import fr.carbonit.treasuremapgame.exceptions.FileException;
 import fr.carbonit.treasuremapgame.factory.AdventurerFactory;
 import fr.carbonit.treasuremapgame.factory.MountainFactory;
 import fr.carbonit.treasuremapgame.factory.TreasureFactory;
+import fr.carbonit.treasuremapgame.interfaces.IFileContentChecker;
 import fr.carbonit.treasuremapgame.interfaces.IFileContentService;
 import fr.carbonit.treasuremapgame.interfaces.impl.AdventurerMoveChecker;
 import fr.carbonit.treasuremapgame.interfaces.impl.MapObjectsChecker;
@@ -16,20 +17,37 @@ import fr.carbonit.treasuremapgame.model.mapobject.moving.Adventurer;
 import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Mountain;
 import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
+/**
+ * Contrôle le fil du jeu, de la récupération des données du fichier à
+ * l'écriture du résultat dans un fichier
+ * 
+ * @author bryan
+ *
+ */
 public class TreasureMapGameController {
 
 	private IFileContentService fileContentService;
+	private IFileContentChecker fileContentChecker;
+
 	private GameMap map;
 
-	public TreasureMapGameController(IFileContentService fileContentManager) {
-		this.fileContentService = fileContentManager;
+	public TreasureMapGameController(IFileContentService fileContentService, IFileContentChecker fileContentChecker) {
+		this.fileContentService = fileContentService;
+		this.fileContentChecker = fileContentChecker;
 	}
 
 	public void startGame() throws FileException {
-		fileContentService.verifyFileContent();
+		verifyFileContent();
 		initGameMap();
 		map.startGame();
 		fileContentService.writeFile(map);
+	}
+
+	private void verifyFileContent() throws FileContentException {
+		String[] fileContentLines = fileContentService.getFileContentLines();
+
+		fileContentChecker.verifyFileNotEmpty(fileContentLines);
+		fileContentChecker.verifyFileHasRightFormatedLines(fileContentLines);
 	}
 
 	private void initGameMap() throws FileContentException {

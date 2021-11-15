@@ -7,6 +7,12 @@ import java.util.stream.Stream;
 
 import fr.carbonit.treasuremapgame.consts.GlobalConsts;
 
+/**
+ * Créé les objets de la map nécéssaires au fonctionnement du jeu
+ * 
+ * @author bryan
+ *
+ */
 public class MapObjectFactory {
 
 	private String[] fileContentLines = new String[0];

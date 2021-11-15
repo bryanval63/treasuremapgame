@@ -8,6 +8,12 @@ import fr.carbonit.treasuremapgame.model.enums.OrientationEnum;
 import fr.carbonit.treasuremapgame.model.mapobject.MapObject;
 import fr.carbonit.treasuremapgame.model.mapobject.nomoving.Treasure;
 
+/**
+ * Type d'objet qui peut se déplacer sur la carte
+ * 
+ * @author bryan
+ *
+ */
 public abstract class MovingMapObject extends MapObject {
 
 	private String movementsSequence;
